@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "scrna-seq"
+version = "0.1.0"
+description = "single-cell RNA sequencing analysis"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "scrna_seq"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scanpy = "^1.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
