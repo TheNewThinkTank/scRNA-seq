@@ -1,4 +1,6 @@
-"""_summary_
+"""Generate barplot of average cell type presence,
+for all patients in data file.
+Shown in descending order.
 """
 
 import matplotlib.pyplot as plt
