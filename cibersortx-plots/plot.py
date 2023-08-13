@@ -17,12 +17,12 @@ df = df.drop(
 )
 
 # print(df.head())
-numbeer_of_patients = len(df)
+number_of_patients = len(df)
 
 # EXAMPLE
-# print(df['malignant_cell'].sum() / numbeer_of_patients)
+# print(df['malignant_cell'].sum() / number_of_patients)
 
-ser = df.apply(lambda x: x.sum() / numbeer_of_patients)
+ser = df.apply(lambda x: x.sum() / number_of_patients)
 
 ser = ser.sort_values(ascending=False)
 
