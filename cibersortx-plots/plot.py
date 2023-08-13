@@ -22,15 +22,22 @@ numbeer_of_patients = len(df)
 # EXAMPLE
 # print(df['malignant_cell'].sum() / numbeer_of_patients)
 
-df = df.apply(lambda x: x.sum() / numbeer_of_patients)
-print(df)
+ser = df.apply(lambda x: x.sum() / numbeer_of_patients)
+
+ser = ser.sort_values(ascending=False)
+
+print(ser)
+# print(type(ser))  # <class 'pandas.core.series.Series'>
+# print(ser.index)
 
 plt.figure(figsize=(12, 6))
-# ax = df.plot.bar(
-#     rot=90
-#     )
+# sum of values (V) for given cell type divided by the number of patients (N)
+y_label = r"$(\sum V) / N $"
 plt.subplots_adjust(bottom=0.5)
-sns.barplot(x=df.index, y=df.values)
+ax = sns.barplot(x=ser.index, y=ser.values)
+ax.set(xlabel="Cell Type", ylabel=y_label)
 plt.xticks(rotation=90)
+plt.ylabel(y_label, rotation=0)
+ax.yaxis.set_label_coords(-0.1, 0.5)  # 1.02
 # plt.show()
 plt.savefig("barplot.png")
