@@ -9,7 +9,8 @@ The steps include:
 - visualization (PCA and UMAP plots)
 - identification of marker genes using a t-test
 
-Make sure to replace "your_dataset.h5ad" with the actual path to your scRNA-seq dataset file.
+Make sure to replace "your_dataset.h5ad"
+with the actual path to your scRNA-seq dataset file.
 Additionally, adapt the code to your specific dataset and analysis goals.
 
 The Scanpy documentation,
