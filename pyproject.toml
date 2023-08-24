@@ -5,7 +5,7 @@ description = "single-cell RNA sequencing analysis"
 authors = ["Your Name <you@example.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "scrna_seq"}]
+packages = []
 
 [tool.poetry.dependencies]
 python = "^3.11"
