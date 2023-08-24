@@ -45,3 +45,15 @@ jobs:
       - name: Lint with ruff
         continue-on-error: true
         run: poetry run ruff .
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          extra-packages: lintr
+
+      - name: Lint R
+        run: lintr::lint_package()
+        shell: Rscript {0}        
