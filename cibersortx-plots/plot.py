@@ -3,9 +3,9 @@ for all patients in data file.
 Shown in descending order.
 """
 
-import matplotlib.pyplot as plt
-import pandas as pd
-import seaborn as sns
+import matplotlib.pyplot as plt  # type: ignore
+import pandas as pd  # type: ignore
+import seaborn as sns  # type: ignore
 
 df = pd.read_csv("data.txt", sep="\t")
 
